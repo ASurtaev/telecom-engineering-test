@@ -1,0 +1,1 @@
+version: 1formatters:  serverFormatter:    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'handlers:  file:    class: logging.FileHandler    level: DEBUG    formatter: serverFormatter    filename: 'server.log'    mode: 'a'loggers:  server_log:    level: DEBUG    handlers: [file]    propagate: noroot:  level: DEBUG  handlers: [file]
